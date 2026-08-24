@@ -1,0 +1,9 @@
+{% if todos %}
+    <ul>
+    {% for todo in todos %}
+        <li><a href="/polls/{{ todo.stato }}/">{{ todo.stato }}</a><a href="/polls/{{ todo.testo }}/">{{ todo.testo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No todos are available.</p>
+{% endif %}
