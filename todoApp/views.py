@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Todos
+from .models import Todos, TextRequest
 from rest_framework import permissions, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
+from utils.utils import checkAvailableLanguages
+
 
 from .serializers import TodosSerializer
 
@@ -42,6 +44,13 @@ def updateTodos(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(["POST"])
+#TODO finish api for text input
+def freeTodos(request):
+    if checkAvailableLanguages(request.LANGUAGE_CODE):
+        return Response("SI")
+    else : 
+        return Response("No")
 
 
 

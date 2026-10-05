@@ -6,5 +6,6 @@ urlpatterns = [
     path("getAllTodos" , views.getAllTodos , name="getAllTodos"),
     path("getTodos" , views.getTodos , name="getTodos"),
     path("addTodos" , views.addTodos , name="addTodos"),
-    path("updateTodos" , views.updateTodos , name="updateTodos")
+    path("updateTodos" , views.updateTodos , name="updateTodos"),
+    path("freeTodos" , views.freeTodos , name="freeTodos")
 ]
