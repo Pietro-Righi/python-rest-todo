@@ -14,5 +14,5 @@ class Todos(models.Model):
 class TextRequest(models.Model):
     language=models.CharField(max_length=20)
     request=models.CharField(max_length=200)
-    #def getTask(self):
-    #    self.request.replace("")
+    def getTask(self):
+        self.request.replace("INSERISCI" , " ")
