@@ -1,0 +1,3 @@
+#Test command to start ubuntu image to generate i18 files 
+# build image docker build -t test . 
+# start container with locale volume docker run -v C:\Progetti\python-rest-todo\:/python-rest-todo --rm -it test
